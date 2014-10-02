@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.3'
+}
+
+task addPerson(type: JavaExec, dependsOn: classes) {
+	if ('addPerson' in gradle.startParameter.taskNames &&
+	    gradle.startParameter.logLevel < LogLevel.QUIET) {
+        println "Note: The task 'addPerson' works best in quiet mode (gradle -q addPerson)"
+    }
+    group 			= 'Formats JSON'
+    description 	= 'Add a person to an address book'
+    main 			= 'formats.json.AddPerson'
+	classpath 		= sourceSets.main.runtimeClasspath
+	standardInput	= System.in
+} 
+
+task listPeople(type: JavaExec) {
+    group 			= 'Formats JSON'
+    description 	= 'List the contents of an address book'
+    main 			= 'formats.json.ListPeople'
+	classpath 		= sourceSets.main.runtimeClasspath
+}
+
