@@ -51,7 +51,7 @@ public class TodoOrganizer {
 
 	public static void main(String[] args) {
 
-		// Debug args
+		//Debug args
 //		args = new String[2];
 //		args[0] = DEFAULT_FILE_NAME;
 //		args[1] = "-i";
@@ -140,6 +140,7 @@ public class TodoOrganizer {
 			output.write(gson.toJson(todoList));
 			output.close();
 			System.out.println("File \"" + filename + "\" has been saved.");
+			todoList.setSavedChanges();
 			return true;
 		} catch (IOException e) {
 			System.out.println("--ERROR: cannot save in file \"" + filename + "\"");
