@@ -1,5 +1,7 @@
 package todo.console;
 
+import java.util.Scanner;
+
 public class TodoTask {
 
 	/*
@@ -123,7 +125,32 @@ public class TodoTask {
 		if (value.equals(""))
 			return "";
 		else
-			return prefix + field + ": " + value + "\n";
+			return prefix + stringLengthDelimiter(field + ": " + value, "\n"+prefix+prefix, 60) + "\n";
+	}
+	
+	private String stringLengthDelimiter(String str, String delimiter, int length){
+		String output = "";
+		Scanner sc = new Scanner(str);
+		
+		int i=0;
+		int lastDivision = 0;
+		while(sc.hasNext()){
+			String word = sc.next();
+			output += word;
+			
+			if(sc.hasNext()){
+				output += " ";
+				i += word.length();
+				if(i / length > lastDivision){
+					output += delimiter;
+					lastDivision = i/length;
+				}
+			}
+		}
+		
+		sc.close();
+		
+		return output;
 	}
 
 	public boolean canPassFilter(String fTitle, String fContent, String fProject, TaskPriority fPriority,
