@@ -1,4 +1,4 @@
-package todo.console;
+package todo.model;
 
 public enum TaskStatus {
 	COMPLETED, PENDING;
