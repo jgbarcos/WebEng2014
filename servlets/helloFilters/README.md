@@ -1,0 +1,4 @@
+# Hello Filters!
+This project contains a demonstration of the use of [Filter](http://docs.oracle.com/javaee/6/api/javax/servlet/Filter.html) and teh annotation [WebFilter](http://docs.oracle.com/javaee/6/api/javax/servlet/annotation/WebFilter.html). This project adds extra security to [HelloSession](https://github.com/UNIZAR-30246-WebEngineering/WebEng2014/tree/master/servlets/helloSession) by forbidding access to any URL to unauthenticated users but ```/login.html``` and ```/login```. When the user is authenticated it can access to any URL even URL that returns 404 Not Found.
+
+Deploy your code to a [Jetty](http://www.eclipse.org/jetty/) server with ```gradle jettyEclipseRun```. Then, open the page at [http://localhost:8080/login.html](http://localhost:8080/login.html). Use ```admin:1234``` for login.

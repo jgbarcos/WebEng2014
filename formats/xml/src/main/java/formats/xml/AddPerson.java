@@ -15,7 +15,7 @@ import javax.xml.bind.Unmarshaller;
 import static formats.xml.PhoneType.*;
 
 public class AddPerson {
-	
+
 	public final static String DEFAULT_FILE_NAME = "address_book.xml";
 
 	// This function fills in a Person message based on user input.
@@ -70,7 +70,7 @@ public class AddPerson {
 		JAXBContext context = JAXBContext.newInstance(AddressBook.class);
 		String filename = DEFAULT_FILE_NAME;
 		if (args.length > 0) {
-			filename=args[0];
+			filename = args[0];
 		}
 
 		AddressBook addressBook = new AddressBook();
@@ -91,7 +91,7 @@ public class AddPerson {
 		// Write the new address book back to disk.
 		FileWriter output = new FileWriter(filename);
 		Marshaller ma = context.createMarshaller();
-	    ma.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+		ma.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 		ma.marshal(addressBook, output);
 		output.close();
 	}

@@ -12,7 +12,7 @@ import formats.pb.AddressBookProtos.AddressBook;
 import formats.pb.AddressBookProtos.Person;
 
 public class AddPerson {
-	
+
 	public final static String DEFAULT_FILE_NAME = "address_book.pb";
 
 	// This function fills in a Person message based on user input.
@@ -66,7 +66,7 @@ public class AddPerson {
 	public static void main(String[] args) throws Exception {
 		String filename = DEFAULT_FILE_NAME;
 		if (args.length > 0) {
-			filename=args[0];
+			filename = args[0];
 		}
 
 		AddressBook.Builder addressBook = AddressBook.newBuilder();

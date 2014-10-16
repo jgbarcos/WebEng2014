@@ -22,8 +22,9 @@ public class HelloThreadSafe extends HttpServlet {
 		String thisIsThreadSafe = req.getParameter("name");
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
-		out.println("<html><head><title>Hello " + thisIsThreadSafe + "!</title></head>"
-				+ "<body><h1>Hello " + thisIsThreadSafe + " (" + thisIsNotThreadSafe.incrementAndGet()
+		out.println("<html><head><title>Hello " + thisIsThreadSafe
+				+ "!</title></head>" + "<body><h1>Hello " + thisIsThreadSafe
+				+ " (" + thisIsNotThreadSafe.incrementAndGet()
 				+ " times)!</h1></body></html>");
 	}
 

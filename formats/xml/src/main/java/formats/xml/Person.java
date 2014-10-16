@@ -44,7 +44,7 @@ public class Person {
 	private int id;
 	private String email;
 	private List<PhoneNumber> phoneList = new ArrayList<PhoneNumber>();
-	
+
 	public void addPhone(PhoneNumber phone) {
 		phoneList.add(phone);
 	}
@@ -52,5 +52,5 @@ public class Person {
 	public boolean hasEmail() {
 		return email != null;
 	}
-	
+
 }

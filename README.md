@@ -6,9 +6,11 @@ This is the repository that we will use for  uploading all the assignments for c
 Source code:
 * [Representation and formats](formats)
 * [Anatomy of a simple dynamic Web application](servlets)
+* ["Big" web services](bigws)
 
 ## Lab
 * [0 - Setup](labs/setup.md)
+* [1 - RPC/SOAP](labs/soap.md)
 
 ## Set up git
 This is a __git__ repository. First, you’ll need to sign up for an account on [GitHub.com](https://github.com). Install __git__ for Windows, Mac or Linux as [needed](http://git-scm.com/downloads). 

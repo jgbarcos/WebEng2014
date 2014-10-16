@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import static formats.json.PhoneType.*;
 
 public class AddPerson {
-	
+
 	public final static String DEFAULT_FILE_NAME = "address_book.json";
 
 	// This function fills in a Person message based on user input.
@@ -67,7 +67,7 @@ public class AddPerson {
 	public static void main(String[] args) throws Exception {
 		String filename = DEFAULT_FILE_NAME;
 		if (args.length > 0) {
-			filename=args[0];
+			filename = args[0];
 		}
 
 		AddressBook addressBook = new AddressBook();
@@ -75,7 +75,8 @@ public class AddPerson {
 
 		// Read the existing address book.
 		try {
-			addressBook = gson.fromJson(new FileReader(filename), AddressBook.class);
+			addressBook = gson.fromJson(new FileReader(filename),
+					AddressBook.class);
 		} catch (FileNotFoundException e) {
 			System.out.println(filename
 					+ ": File not found.  Creating a new file.");

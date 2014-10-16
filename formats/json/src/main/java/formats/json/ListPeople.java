@@ -4,7 +4,6 @@ import java.io.FileReader;
 
 import com.google.gson.Gson;
 
-
 class ListPeople {
 	public final static String DEFAULT_FILE_NAME = "address_book.json";
 
@@ -44,8 +43,8 @@ class ListPeople {
 		}
 
 		// Read the existing address book.
-		AddressBook addressBook = gson.fromJson(new FileReader(
-				filename), AddressBook.class);
+		AddressBook addressBook = gson.fromJson(new FileReader(filename),
+				AddressBook.class);
 
 		Print(addressBook);
 	}
