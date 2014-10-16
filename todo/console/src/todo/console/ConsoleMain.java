@@ -4,6 +4,7 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 import todo.actions.*;
+import todo.console.GsonIO;
 import todo.model.TaskPriority;
 import todo.model.TaskStatus;
 import todo.model.TodoList;

@@ -55,7 +55,7 @@ public abstract class Action {
 	protected static void enterStatus(Scanner input, PrintStream output, TodoTask task, TaskStatus defaultStatus) {
 		// Enter Status:
 		output.print("Enter task " + TodoTask.TASK_STATUS + " " + TaskStatus.enumString() + ": ");
-		task.setStatus(TaskStatus.findPriority(input.nextLine()));
+		task.setStatus(TaskStatus.findStatus(input.nextLine()));
 		if (task.getStatus() == null) {
 			output.println("Unknown status.  Using default: " + defaultStatus.toString());
 			task.setStatus(defaultStatus);
@@ -117,7 +117,7 @@ public abstract class Action {
 		// Filter Status
 		System.out.print("Enter Status Filter " + TaskStatus.enumString() + ": ");
 		line = sc.nextLine();
-		TaskStatus fStatus = TaskStatus.findPriority(line);
+		TaskStatus fStatus = TaskStatus.findStatus(line);
 		if (fStatus == null && !line.equals("")) {
 			System.out.println("Unknown status.  Status not filtered");
 		}

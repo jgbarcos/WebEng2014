@@ -3,7 +3,7 @@ package todo.model;
 public enum TaskStatus {
 	COMPLETED, PENDING;
 	
-	public static TaskStatus findPriority(String key){
+	public static TaskStatus findStatus(String key){
 		for(int i=0; i<TaskStatus.values().length; i++){
 			TaskStatus priority = TaskStatus.values()[i];
 			if(key.toLowerCase().equals(priority.toString().toLowerCase())){
