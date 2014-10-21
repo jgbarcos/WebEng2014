@@ -9,3 +9,69 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3'
 }
 
+
+task addTask(type: JavaExec, dependsOn: classes) {
+	if ('addTask' in gradle.startParameter.taskNames &&
+	    gradle.startParameter.logLevel < LogLevel.QUIET) {
+        println "Note: The task 'addTask' works best in quiet mode (gradle -q addTask)"
+    }
+	args			= ['--add']
+    group 			= 'ToDo Organizer'
+    description 	= 'Add a task to a default ToDo list file: todoList.json'
+    sourceSets.main.java.srcDirs = ['src']
+    main 			= 'todo.console.ConsoleMain'
+	classpath 		= sourceSets.main.runtimeClasspath
+	standardInput	= System.in
+} 
+
+task removeTask(type: JavaExec, dependsOn: classes) {
+	if ('removeTask' in gradle.startParameter.taskNames &&
+	    gradle.startParameter.logLevel < LogLevel.QUIET) {
+        println "Note: The task 'removeTask' works best in quiet mode (gradle -q removeTask)"
+    }
+	args			= ['--remove']
+    group 			= 'ToDo Organizer'
+    description 	= 'Remove a task from a default ToDo list file: todoList.json'
+    sourceSets.main.java.srcDirs = ['src']
+    main 			= 'todo.console.ConsoleMain'
+	classpath 		= sourceSets.main.runtimeClasspath
+	standardInput	= System.in
+} 
+
+task editTask(type: JavaExec, dependsOn: classes) {
+	if ('editTask' in gradle.startParameter.taskNames &&
+	    gradle.startParameter.logLevel < LogLevel.QUIET) {
+        println "Note: The task 'editTask' works best in quiet mode (gradle -q editTask)"
+    }
+	args			= ['--edit']
+    group 			= 'ToDo Organizer'
+    description 	= 'Edit a task from a default ToDo list file: todoList.json'
+    sourceSets.main.java.srcDirs = ['src']
+    main 			= 'todo.console.ConsoleMain'
+	classpath 		= sourceSets.main.runtimeClasspath
+	standardInput	= System.in
+} 
+
+task listTask(type: JavaExec, dependsOn: classes) {
+	args			= ['--list']
+    group 			= 'ToDo Organizer'
+    description 	= 'List all tasks from a default ToDo list file: todoList.json'
+    sourceSets.main.java.srcDirs = ['src']
+    main 			= 'todo.console.ConsoleMain'
+	classpath 		= sourceSets.main.runtimeClasspath
+	standardInput	= System.in
+} 
+
+task searchTask(type: JavaExec, dependsOn: classes) {
+	if ('searchTask' in gradle.startParameter.taskNames &&
+	    gradle.startParameter.logLevel < LogLevel.QUIET) {
+        println "Note: The task 'searchTask' works best in quiet mode (gradle -q searchTask)"
+    }
+	args			= ['--search']
+    group 			= 'ToDo Organizer'
+    description 	= 'List all task that fulfill a search query from a default ToDo list file: todoList.json'
+    sourceSets.main.java.srcDirs = ['src']
+    main 			= 'todo.console.ConsoleMain'
+	classpath 		= sourceSets.main.runtimeClasspath
+	standardInput	= System.in
+} 

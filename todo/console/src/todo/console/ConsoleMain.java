@@ -109,11 +109,6 @@ public class ConsoleMain {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Debug args
-		args = new String[2];
-		args[0] = "-i";
-		args[1] = DEFAULT_FILE_NAME;
-
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String filename = DEFAULT_FILE_NAME;
 
@@ -173,8 +168,10 @@ public class ConsoleMain {
 				}
 				input.close();
 
-				// Save on Exit
-				GsonIO.saveFile(gson, filename, todoList);
+				// Save on Exit if necessary
+				if(todoList.hasUnsavedChanges()){
+					GsonIO.saveFile(gson, filename, todoList);
+				}
 			}
 
 		} catch (JsonSyntaxException | JsonIOException e) {

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -50,13 +51,14 @@ public class MainServlet extends HttpServlet {
 		
 		resp.setContentType("text/html");
 		
-		/*// Request jsp dispatcher
+		//Request jsp dispatcher
 		req.setAttribute("results", results);
-		RequestDispatcher dispatcher1 = req.getRequestDispatcher("");
-		dispatcher1.forward(req,resp);*/
+		req.setAttribute("title", "Query Results");
+		RequestDispatcher dispatcher1 = req.getRequestDispatcher("ShowTaskList.jsp");
+		dispatcher1.forward(req,resp);
 		
 		//TODO: Better use JSP for this:		
-		PrintWriter out = resp.getWriter();
+		/*PrintWriter out = resp.getWriter();
 		String output = "<html><head><title>Query Results</title></head>"
 				+ "<body>"
 				+ "<h1>Query Results:</h1>";
@@ -72,7 +74,8 @@ public class MainServlet extends HttpServlet {
 		output += "</html>"
 				+ "</body>";
 		
-		out.println(output);
+		out.println(output);*/
+
 
 	}
 	

@@ -20,6 +20,8 @@ public class TodoTask {
 	public final static String TASK_CONTENT = "Content";
 	public final static String TASK_PRIORITY = "Priority";
 	public final static String TASK_STATUS = "Status";
+	
+	private final static int DEFAULT_LINE_LENGTH = -1;
 
 	/*
 	 * Getters and Setters:
@@ -100,16 +102,20 @@ public class TodoTask {
 	public String toString(){
 		return toString("", "\n");
 	}
+	
+	public String toString(String prefix, String lineBreak){
+		return toString(prefix, lineBreak, DEFAULT_LINE_LENGTH);
+	}
 
-	public String toString(String prefix, String lineBreak) {
+	public String toString(String prefix, String lineBreak, int lineLength) {
 		String output = "";
 
-		output += emptySafeToString(prefix, lineBreak, TASK_TITLE, nullSafeToString(this.title));
-		output += emptySafeToString(prefix, lineBreak, TASK_END_DATE, nullSafeToString(this.endDate));
-		output += emptySafeToString(prefix, lineBreak, TASK_PROJECT, nullSafeToString(this.project));
-		output += emptySafeToString(prefix, lineBreak, TASK_CONTENT, nullSafeToString(this.content));
-		output += emptySafeToString(prefix, lineBreak, TASK_PRIORITY, nullSafeToString(this.priority));
-		output += emptySafeToString(prefix, lineBreak, TASK_STATUS, nullSafeToString(this.status));
+		output += emptySafeToString(prefix, lineBreak, TASK_TITLE, nullSafeToString(this.title), lineLength);
+		output += emptySafeToString(prefix, lineBreak, TASK_END_DATE, nullSafeToString(this.endDate), lineLength);
+		output += emptySafeToString(prefix, lineBreak, TASK_PROJECT, nullSafeToString(this.project), lineLength);
+		output += emptySafeToString(prefix, lineBreak, TASK_CONTENT, nullSafeToString(this.content), lineLength);
+		output += emptySafeToString(prefix, lineBreak, TASK_PRIORITY, nullSafeToString(this.priority), lineLength);
+		output += emptySafeToString(prefix, lineBreak, TASK_STATUS, nullSafeToString(this.status), lineLength);
 
 		return output;
 	}
@@ -121,36 +127,43 @@ public class TodoTask {
 			return obj.toString();
 	}
 
-	private String emptySafeToString(String prefix, String lineBreak, String field, String value) {
+	private String emptySafeToString(String prefix, String lineBreak, String field, String value, int lineLength) {
 		if (value.equals(""))
 			return "";
 		else
-			return prefix + stringLengthDelimiter(field + ": " + value, lineBreak+prefix+prefix, 60) + lineBreak;
+			return prefix + stringLengthDelimiter(field + ": " + value, lineBreak+prefix+prefix, lineLength) + lineBreak;
 	}
 	
 	private String stringLengthDelimiter(String str, String delimiter, int length){
-		String output = "";
-		Scanner sc = new Scanner(str);
-		
-		int i=0;
-		int lastDivision = 0;
-		while(sc.hasNext()){
-			String word = sc.next();
-			output += word;
+		if(length > 0){
+			String output = "";
+			Scanner sc = new Scanner(str);
 			
-			if(sc.hasNext()){
-				output += " ";
-				i += word.length();
-				if(i / length > lastDivision){
-					output += delimiter;
-					lastDivision = i/length;
+			int i=0;
+			int lastDivision = 0;
+			while(sc.hasNext()){
+				String word = sc.next();
+				output += word;
+				
+				if(sc.hasNext()){
+					output += " ";
+					i += word.length();
+					if(i / length > lastDivision){
+						output += delimiter;
+						lastDivision = i/length;
+					}
 				}
 			}
+			
+			sc.close();
+			
+			
+			
+			return output;
 		}
-		
-		sc.close();
-		
-		return output;
+		else {
+			return str;
+		}
 	}
 
 	public boolean canPassFilter(String fTitle, String fContent, String fProject, TaskPriority fPriority,
