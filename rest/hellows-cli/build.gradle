@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+repositories {
+   mavenCentral()                                               
+}
+
+dependencies {
+   compile 'org.glassfish.jersey.core:jersey-client:2.3.1'
+}
+
+
+task client(type: JavaExec) {
+    group 			= 'Hello World Client'
+    description 	= 'Consume a REST endpoint'
+    main 			= 'rest.hellows.Client'
+	classpath 		= sourceSets.main.runtimeClasspath
+}

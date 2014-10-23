@@ -7,10 +7,12 @@ Source code:
 * [Representation and formats](formats)
 * [Anatomy of a simple dynamic Web application](servlets)
 * ["Big" web services](bigws)
+* [REST web services](rest)
 
 ## Lab
 * [0 - Setup](labs/setup.md)
 * [1 - RPC/SOAP](labs/soap.md)
+* [2 - REST](labs/rest.md)
 
 ## Set up git
 This is a __git__ repository. First, you’ll need to sign up for an account on [GitHub.com](https://github.com). Install __git__ for Windows, Mac or Linux as [needed](http://git-scm.com/downloads). 
@@ -42,7 +44,7 @@ $ git merge upstream/master
 First add your changes into your local repository:
 ```
 $ cd WebEng2014
-$ git add -a
+$ git add -A
 $ git commit -m "A CONSISE DESCRIPTION"
 ```
 And then push them to your online _WebEng2014_ repository in __GitHub__:

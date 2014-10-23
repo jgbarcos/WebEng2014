@@ -13,7 +13,7 @@ Tasks:
 * Edit [setup.csv](https://github.com/UNIZAR-30246-WebEngineering/WebEng2014/blob/master/labs/setup.csv) and add your NIA and links to both applications. 
 * Make a pull request. If your appliacatios are OK, the pull request will be accepted. Otherwise the pull request will be rejected and you will be informed of the required fixes. 
 
-Remember, doing these tasks is mandatory! 
+Remember, to do these tasks is mandatory! 
 
 
 
