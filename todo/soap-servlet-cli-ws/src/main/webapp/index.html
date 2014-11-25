@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>ToDo Organizer</title>
+	<style>
+		form  { display: table;      }
+		row   { display: table-row;  }
+		cell  { display: table-cell; }
+	</style>
+</head>
+<body>
+	<h1>Query Fields</h1>
+	(Note: Provide nothing for not filter a text field)
+	<form method="get" action="query">
+		<row>
+			<cell>Title</cell>
+			<cell><input type="text" name="title"></cell>
+		</row>
+		<row>
+			<cell>Project</cell>
+			<cell><input type="text" name="project"></cell>
+		</row>
+		<row>
+			<cell>Content</cell>
+			<cell><input type="text" name="content"></cell>
+		</row>
+		<row>
+			<cell>Priority:</cell>
+			<cell><select name="priority">
+				<option value="">All</option>
+				<option value="low">Low</option>
+				<option value="normal">Normal</option>
+				<option value="important">Important</option>
+				<option value="critical">Critical</option>
+			</select></cell>
+		</row>
+		<row>
+			<cell>Status:</cell>
+			<cell><select name="status">
+				<option value="">All</option>
+				<option value="pending">Pending</option>
+				<option value="completed">Completed</option>
+			</select></cell>
+		</row>
+		 
+		<input type="submit" value="Search">
+	</form>
+</body>
+</html>
