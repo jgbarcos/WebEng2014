@@ -35,6 +35,16 @@ public class TodoList {
 		unsavedChanges = removed;
 		return removed;
 	}
+	
+	public boolean containsTask(int id){
+		for(TodoTask task : taskList){
+			if(task.getId() == id){
+				return true;
+			}
+		}
+		
+		return false;
+	}
 
 	public void setTaskList(List<TodoTask> tasks) {
 		taskList = tasks;

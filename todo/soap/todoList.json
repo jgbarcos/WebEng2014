@@ -1,20 +1,6 @@
 {
-  "currentID": 43,
+  "currentID": 45,
   "taskList": [
-    {
-      "id": 4,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 6,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
     {
       "id": 7,
       "title": "Title_NewTask",
@@ -266,6 +252,51 @@
       "endDate": "EndDate_NewTask",
       "project": "Project_NewTask",
       "content": "Content_NewTask"
+    },
+    {
+      "id": 4,
+      "title": "Title_EditTask",
+      "endDate": "EndDate_EditTask",
+      "project": "Project_EditTask",
+      "content": "Content_EditTask",
+      "priority": "LOW",
+      "status": "PENDING"
+    },
+    {
+      "id": 6,
+      "title": "Title_EditTask",
+      "endDate": "EndDate_EditTask",
+      "project": "Project_EditTask",
+      "content": "Content_EditTask",
+      "priority": "NORMAL",
+      "status": "PENDING"
+    },
+    {
+      "id": 5,
+      "title": "Title_EditTask",
+      "endDate": "EndDate_EditTask",
+      "project": "Project_EditTask",
+      "content": "Content_EditTask",
+      "priority": "NORMAL",
+      "status": "PENDING"
+    },
+    {
+      "id": 43,
+      "title": "Completely New Task",
+      "endDate": "Today",
+      "project": "Test TodoSoap",
+      "content": "This should be a completely new task",
+      "priority": "LOW",
+      "status": "PENDING"
+    },
+    {
+      "id": 44,
+      "title": "Completely New Task",
+      "endDate": "Today",
+      "project": "Test TodoSoap",
+      "content": "This should be a completely new task",
+      "priority": "LOW",
+      "status": "PENDING"
     }
   ]
 }

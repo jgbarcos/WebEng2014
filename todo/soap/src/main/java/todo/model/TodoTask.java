@@ -104,26 +104,32 @@ public class TodoTask {
 	public TodoTask(TodoTask copy) {
 		id = copy.id;
 
-		if (copy.title != null)
+		if (copy.title != null) {
 			title = new String(copy.title);
-		else
+		} else {
 			title = new String();
-		if (copy.endDate != null)
+		}
+		if (copy.endDate != null) {
 			endDate = new String(copy.endDate);
-		else
+		} else {
 			endDate = new String();
-		if (copy.project != null)
+		}
+		if (copy.project != null) {
 			project = new String(copy.project);
-		else
+		} else {
 			project = new String();
-		if (copy.content != null)
+		}
+		if (copy.content != null) {
 			content = new String(copy.content);
-		else
+		} else {
 			content = new String();
-		if (copy.priority != null)
+		}
+		if (copy.priority != null) {
 			priority = copy.priority;
-		if (copy.status != null)
+		}
+		if (copy.status != null) {
 			status = copy.status;
+		}
 	}
 
 	public String toString() {
@@ -184,7 +190,6 @@ public class TodoTask {
 			}
 
 			sc.close();
-
 			return output;
 		} else {
 			return str;
@@ -202,10 +207,16 @@ public class TodoTask {
 		if (fProject != null && !fProject.equals("") && !project.toLowerCase().contains(fProject.toLowerCase())) {
 			return false;
 		}
-		if (fPriority != null && !priority.equals(fPriority)) {
+		// Check priority
+		if (priority == null && fPriority != null) {
+			return false;
+		} else if (fPriority != null && !priority.equals(fPriority)) {
 			return false;
 		}
-		if (fStatus != null && !status.equals(fStatus)) {
+		// Check status
+		if (status == null && fStatus != null) {
+			return false;
+		} else if (fStatus != null && !status.equals(fStatus)) {
 			return false;
 		}
 
