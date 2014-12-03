@@ -1,10 +1,13 @@
 package events.hellows;
 
 import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.websocket.CloseReason;
+import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
+import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -21,7 +24,7 @@ public class WordgameServerEndpoint {
 		logger.info("Connected ... " + session.getId());
 	}
 
-	@OnMessage
+	/*@OnMessage
 	public String onMessage(String message, Session session) {
 		switch (message) {
 		case "quit":
@@ -34,6 +37,30 @@ public class WordgameServerEndpoint {
 			break;
 		}
 		return message;
+	}*/
+	
+	@OnMessage
+	public void onMessage(String message, final Session session) {
+		switch (message) {
+		case "quit":
+			try {
+				session.close(new CloseReason(CloseCodes.NORMAL_CLOSURE,
+						"Game ended"));
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			break;
+		default:
+			for (Session s : session.getOpenSessions()) {
+				try{
+					if(s.isOpen()){
+						s.getBasicRemote().sendObject(message);
+					}
+				} catch (IOException | EncodeException e){
+					logger.log(Level.WARNING, "onMessage to a  client failed");
+				}
+			}
+		}
 	}
 
 	@OnClose
@@ -41,4 +68,9 @@ public class WordgameServerEndpoint {
 		logger.info(String.format("Session %s closed because of %s",
 				session.getId(), closeReason));
 	}
+	
+	@OnError
+    public void onError(Session session, Throwable t) {
+        logger.log(Level.SEVERE, "Error: Conexion cerrada");
+    }
 }
