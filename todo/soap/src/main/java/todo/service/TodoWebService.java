@@ -55,6 +55,20 @@ public class TodoWebService {
 		}
 		return results;
 	}
+	
+	@WebMethod() 
+	public TransferTask getTask(int id){
+		TodoList todoList = readTodoList();
+		TodoTask task = todoList.getTask(id);
+		
+		// If exists, convert to TransferTask
+		if(task != null){
+			return new TransferTask(task);
+		}
+		else{
+			return null;
+		}
+	}
 
 	@WebMethod()
 	public int createTask(TransferTask transfer) {
@@ -67,33 +81,6 @@ public class TodoWebService {
 		TodoTask task = transfer.retrieveTask(DEFAULT_PRIORITY, DEFAULT_STATUS);
 		return threadSafeUpdate(UpdateJob.EDIT, task);
 	}
-	
-	/*
-	//@WebMethod()
-	public int createTask(int id, String title, String endDate, String project, String content, String priority,
-			String status) {
-		TodoTask task = new TodoTask();
-		task.setId(id);
-		task.setTitle(title);
-		task.setEndDate(endDate);
-		task.setContent(content);
-		task.setProject(project);
-
-		try {
-			task.setPriority(TaskPriority.valueOf(priority.toUpperCase()));
-		} catch (IllegalArgumentException | NullPointerException e) {
-			task.setPriority(DEFAULT_PRIORITY);
-		}
-		try {
-			task.setStatus(TaskStatus.valueOf(status.toUpperCase()));
-		} catch (IllegalArgumentException | NullPointerException e) {
-			task.setStatus(DEFAULT_STATUS);
-		}
-
-		return threadSafeUpdate(UpdateJob.CREATE_OR_EDIT, task);
-	}
-
-	 */
 
 	@WebMethod()
 	public int removeTask(int id) {

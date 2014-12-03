@@ -1,292 +1,13 @@
 {
-  "currentID": 45,
+  "currentID": 47,
   "taskList": [
     {
-      "id": 7,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 8,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 9,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 10,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 11,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 12,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 13,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 14,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 15,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 16,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 17,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 18,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 19,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 20,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 21,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 22,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 23,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 24,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 25,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 26,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 27,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 28,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 29,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 30,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 31,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 32,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 33,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 34,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 35,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 36,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 37,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 38,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 39,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 40,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 41,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 42,
-      "title": "Title_NewTask",
-      "endDate": "EndDate_NewTask",
-      "project": "Project_NewTask",
-      "content": "Content_NewTask"
-    },
-    {
-      "id": 4,
-      "title": "Title_EditTask",
-      "endDate": "EndDate_EditTask",
-      "project": "Project_EditTask",
-      "content": "Content_EditTask",
-      "priority": "LOW",
-      "status": "PENDING"
-    },
-    {
-      "id": 6,
-      "title": "Title_EditTask",
-      "endDate": "EndDate_EditTask",
-      "project": "Project_EditTask",
-      "content": "Content_EditTask",
-      "priority": "NORMAL",
-      "status": "PENDING"
-    },
-    {
-      "id": 5,
-      "title": "Title_EditTask",
-      "endDate": "EndDate_EditTask",
-      "project": "Project_EditTask",
-      "content": "Content_EditTask",
-      "priority": "NORMAL",
-      "status": "PENDING"
-    },
-    {
       "id": 43,
-      "title": "Completely New Task",
-      "endDate": "Today",
-      "project": "Test TodoSoap",
-      "content": "This should be a completely new task",
-      "priority": "LOW",
+      "title": "Edited From Browser",
+      "endDate": "Tomorrow",
+      "project": "Test Browser Service",
+      "content": "Task edited in browser",
+      "priority": "NORMAL",
       "status": "PENDING"
     },
     {
@@ -294,8 +15,17 @@
       "title": "Completely New Task",
       "endDate": "Today",
       "project": "Test TodoSoap",
-      "content": "This should be a completely new task",
-      "priority": "LOW",
+      "content": "This should be a completely edited task\r\n(Edited in Browser).",
+      "priority": "NORMAL",
+      "status": "PENDING"
+    },
+    {
+      "id": 45,
+      "title": "Task Created From Browser",
+      "endDate": "Sometime",
+      "project": "ToDo Servlet",
+      "content": "Content created from Browser",
+      "priority": "IMPORTANT",
       "status": "PENDING"
     }
   ]

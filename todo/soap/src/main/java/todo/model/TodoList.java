@@ -45,6 +45,16 @@ public class TodoList {
 		
 		return false;
 	}
+	
+	public TodoTask getTask(int id){
+		for(TodoTask task : taskList){
+			if(task.getId() == id){
+				return task;
+			}
+		}
+		
+		return null;
+	}
 
 	public void setTaskList(List<TodoTask> tasks) {
 		taskList = tasks;
