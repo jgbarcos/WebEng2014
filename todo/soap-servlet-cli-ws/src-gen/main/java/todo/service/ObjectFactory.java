@@ -27,6 +27,8 @@ public class ObjectFactory {
     private final static QName _EditTaskResponse_QNAME = new QName("http://service.todo/", "editTaskResponse");
     private final static QName _FilterTasksResponse_QNAME = new QName("http://service.todo/", "filterTasksResponse");
     private final static QName _RemoveTask_QNAME = new QName("http://service.todo/", "removeTask");
+    private final static QName _GetTask_QNAME = new QName("http://service.todo/", "getTask");
+    private final static QName _GetTaskResponse_QNAME = new QName("http://service.todo/", "getTaskResponse");
     private final static QName _CreateTaskResponse_QNAME = new QName("http://service.todo/", "createTaskResponse");
     private final static QName _CreateTask_QNAME = new QName("http://service.todo/", "createTask");
     private final static QName _EditTask_QNAME = new QName("http://service.todo/", "editTask");
@@ -105,6 +107,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetTaskResponse }
+     * 
+     */
+    public GetTaskResponse createGetTaskResponse() {
+        return new GetTaskResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetTask }
+     * 
+     */
+    public GetTask createGetTask() {
+        return new GetTask();
+    }
+
+    /**
      * Create an instance of {@link TransferTask }
      * 
      */
@@ -137,6 +155,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service.todo/", name = "removeTask")
     public JAXBElement<RemoveTask> createRemoveTask(RemoveTask value) {
         return new JAXBElement<RemoveTask>(_RemoveTask_QNAME, RemoveTask.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTask }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.todo/", name = "getTask")
+    public JAXBElement<GetTask> createGetTask(GetTask value) {
+        return new JAXBElement<GetTask>(_GetTask_QNAME, GetTask.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTaskResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.todo/", name = "getTaskResponse")
+    public JAXBElement<GetTaskResponse> createGetTaskResponse(GetTaskResponse value) {
+        return new JAXBElement<GetTaskResponse>(_GetTaskResponse_QNAME, GetTaskResponse.class, null, value);
     }
 
     /**

@@ -32,9 +32,9 @@ public interface TodoWebService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createTask", targetNamespace = "http://service.todo/", className = "todo.service.CreateTask")
-    @ResponseWrapper(localName = "createTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.CreateTaskResponse")
-    public int createTask(
+    @RequestWrapper(localName = "editTask", targetNamespace = "http://service.todo/", className = "todo.service.EditTask")
+    @ResponseWrapper(localName = "editTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.EditTaskResponse")
+    public int editTask(
         @WebParam(name = "arg0", targetNamespace = "")
         TransferTask arg0);
 
@@ -46,11 +46,39 @@ public interface TodoWebService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "editTask", targetNamespace = "http://service.todo/", className = "todo.service.EditTask")
-    @ResponseWrapper(localName = "editTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.EditTaskResponse")
-    public int editTask(
+    @RequestWrapper(localName = "removeTask", targetNamespace = "http://service.todo/", className = "todo.service.RemoveTask")
+    @ResponseWrapper(localName = "removeTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.RemoveTaskResponse")
+    public int removeTask(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createTask", targetNamespace = "http://service.todo/", className = "todo.service.CreateTask")
+    @ResponseWrapper(localName = "createTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.CreateTaskResponse")
+    public int createTask(
         @WebParam(name = "arg0", targetNamespace = "")
         TransferTask arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns todo.service.TransferTask
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTask", targetNamespace = "http://service.todo/", className = "todo.service.GetTask")
+    @ResponseWrapper(localName = "getTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.GetTaskResponse")
+    public TransferTask getTask(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
     /**
      * 
@@ -77,19 +105,5 @@ public interface TodoWebService {
         String arg3,
         @WebParam(name = "arg4", targetNamespace = "")
         String arg4);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "removeTask", targetNamespace = "http://service.todo/", className = "todo.service.RemoveTask")
-    @ResponseWrapper(localName = "removeTaskResponse", targetNamespace = "http://service.todo/", className = "todo.service.RemoveTaskResponse")
-    public int removeTask(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
 
 }

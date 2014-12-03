@@ -12,6 +12,10 @@
 
 <xs:element name="filterTasksResponse" type="tns:filterTasksResponse"/>
 
+<xs:element name="getTask" type="tns:getTask"/>
+
+<xs:element name="getTaskResponse" type="tns:getTaskResponse"/>
+
 <xs:element name="removeTask" type="tns:removeTask"/>
 
 <xs:element name="removeTaskResponse" type="tns:removeTaskResponse"/>
@@ -77,6 +81,18 @@
 <xs:complexType name="removeTaskResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTask">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTaskResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:transferTask" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.WebServiceException;
 
 import todo.model.TodoTask;
 import todo.service.TodoWebService;
@@ -17,7 +18,7 @@ import todo.service.TransferTask;
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = { "/query" })
-public class MainServlet extends HttpServlet {
+public class ShowTasksServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -36,20 +37,29 @@ public class MainServlet extends HttpServlet {
 		String priority = req.getParameter("priority");
 		String status = req.getParameter("status");
 
-		TodoWebService tws = todo.service.Client.createTodoWebService();
+		// Connect to soap
+		TodoWebService tws = null;
+		try{
+			tws = todo.service.Client.createTodoWebService();
+		}catch(WebServiceException e){
+			resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE);
+			return;
+		}
 		
+		// Retrieve filter results as TransferTasks
 		List<TransferTask> transferList = tws.filterTasks(title, project, content, priority, status);
+		
+		// Convert TransferTasks to TodoTasks
 		List<TodoTask> results = new ArrayList<TodoTask>();
 		for(TransferTask transfer : transferList){
 			results.add(new TodoTask(transfer));
 		}
 		
-		
+		// Set parameters
 		resp.setContentType("text/html");
-		
-		//Request jsp dispatcher
 		req.setAttribute("results", results);
-		req.setAttribute("title", "Query Results");
+		
+		// Request jsp dispatcher
 		RequestDispatcher dispatcher1 = req.getRequestDispatcher("ShowTaskList.jsp");
 		dispatcher1.forward(req,resp);
 	}
