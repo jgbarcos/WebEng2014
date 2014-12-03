@@ -14,6 +14,7 @@ Source code:
 * [1 - RPC/SOAP](labs/soap.md)
 * [2 - REST](labs/rest.md)
 * [3 - Events](labs/events.md)
+* [4 - EIP](labs/eip.md)
 
 ## Set up git
 This is a __git__ repository. First, you’ll need to sign up for an account on [GitHub.com](https://github.com). Install __git__ for Windows, Mac or Linux as [needed](http://git-scm.com/downloads). 
