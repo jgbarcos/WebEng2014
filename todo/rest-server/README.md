@@ -1,0 +1,2 @@
+# Address book service!
+This project contains a demonstration of a CRUD repository with a RESTful interface. The code contains a set of [JUnit](http://junit.org/) tests that show how a REST client can interact with this repository.
