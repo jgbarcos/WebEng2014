@@ -1,0 +1,41 @@
+{
+  "currentID": 56,
+  "taskList": [
+    {
+      "id": 44,
+      "title": "Completely New Task",
+      "endDate": "Today",
+      "project": "Test TodoSoap",
+      "content": "This should be a completely edited task\r\n(Edited in Browser).",
+      "priority": "NORMAL",
+      "status": "PENDING"
+    },
+    {
+      "id": 45,
+      "title": "Task Created From Browser",
+      "endDate": "Sometime",
+      "project": "ToDo Servlet",
+      "content": "Content created from Browser",
+      "priority": "IMPORTANT",
+      "status": "PENDING"
+    },
+    {
+      "id": 47,
+      "title": "Todo Test",
+      "endDate": "Tomorrow",
+      "project": "Soap w/ Webservlet",
+      "content": "Just a test task created from browser",
+      "priority": "LOW",
+      "status": "PENDING"
+    },
+    {
+      "id": 48,
+      "title": "Completely New Task",
+      "endDate": "Today",
+      "project": "Test TodoSoap",
+      "content": "This should be a completely new task",
+      "priority": "LOW",
+      "status": "PENDING"
+    }
+  ]
+}

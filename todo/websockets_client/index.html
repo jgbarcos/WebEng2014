@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo Organizer</title>
+	<style>
+		form  { display: table;      }
+		row   { display: table-row;  }
+		cell  { display: table-cell; }
+		div#pad { }
+	</style>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/task.js"></script>
+</head>
+<body>
+	<h1>Todo Organizer</h1>
+	<div style="margin-left: 1em;">
+		<row>
+			<cell>ID:</cell>
+			<cell><input id="task_id" type="number" name="id" value=""></cell>
+		</row>
+		<row>
+			<cell>Title:</cell>
+			<cell><input id="task_title" type="text" name="title" value=""></cell>
+		</row>
+		<row>
+			<cell>Project:</cell>
+			<cell><input id="task_project" type="text" name="project" value="" ></cell>
+		</row>
+		<row>
+			<cell>End Date:</cell>
+			<cell><input id="task_end_date" type="text" name="endDate" value="" ></cell>
+		</row>
+		<row>
+			<cell>Content:</cell>
+			<cell>
+				<textarea id="task_content" name="content" rows="4" cols="50"></textarea>
+			</cell>
+		</row>
+		<row>
+			<cell>Priority:</cell>
+			<cell><select id="task_priority" name="priority">
+				<option value=" " >Default</option>
+				<option value="low" >Low</option>
+				<option value="normal" >Normal</option>
+				<option value="important" >Important</option>
+				<option value="critical" >Critical</option>
+			</select></cell>
+		</row>
+		<row>
+			<cell>Status:</cell>
+			<cell><select id="task_status" name="status">
+				<option value=" ">Default</option>
+				<option value="pending" >Pending</option>
+				<option value="completed" >Completed</option>
+			</select></cell>
+		</row>
+		<row>
+			<cell>
+				<input id="create_button" type="button" value="Create">
+			</cell>
+			<cell>
+				<input id="edit_button" type="button" value="Edit">
+			</cell>
+		</row>
+	</div>
+
+	<h1>Task List</h1>
+	<table id = "TodoList">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>End Date</th>
+				<th>Project</th>
+				<th>Content</th>
+				<th>Priority</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	</body>
+</html>
